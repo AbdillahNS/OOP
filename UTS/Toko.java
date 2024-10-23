@@ -26,6 +26,18 @@ public class Toko {
         }
     }
 
+    public void beliPupuk(Pemain pemain, int jumlah) {
+        int hargaPupuk = 10000;
+        int totalHarga = hargaPupuk * jumlah;
+        if (pemain.getUang() >= totalHarga) {
+            pemain.kurangiUang(totalHarga);
+            pemain.tambahPupuk(jumlah);
+            System.out.println("Berhasil membeli " + jumlah + " pupuk dengan total harga " + totalHarga);
+        } else {
+            System.out.println("Uang tidak cukup untuk membeli pupuk.");
+        }
+    }
+
     public void jualHasilPanen(Pemain pemain, int jumlah) {
         int hargaPanen = 50000;
         int totalPenjualan = jumlah * hargaPanen;

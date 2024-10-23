@@ -117,5 +117,23 @@ public class Lahan {
             sawi.setMenyiram(true);
             System.out.println("Sawi telah disiram.");
         }
-    }   
+    }
+
+    public void beriPupuk(Pemain pemain) {
+        if (pemain.getJumlahPupuk() > 0) {
+            if (padi != null) {
+                padi.setDiberiPupuk(true);
+            }
+            if (jagung != null) {
+                jagung.setDiberiPupuk(true);
+            }
+            if (sawi != null) {
+                sawi.setDiberiPupuk(true);
+            }
+            pemain.kurangiPupuk(1);
+            System.out.println("Semua tanaman telah diberi pupuk.");
+        } else {
+            System.out.println("Tidak ada pupuk.");
+        }
+    }
 }

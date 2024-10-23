@@ -19,12 +19,13 @@ public class MainUTS {
             System.out.println("╚═══════════════════════════════════════╝");
             System.out.println("1. Menanam Tanaman");
             System.out.println("2. Menyiram Tanaman");
-            System.out.println("3. Panen Tanaman");
-            System.out.println("4. Cek Status Tanaman");
-            System.out.println("5. Update Hari");
-            System.out.println("6. Cek kondisi Cuaca");
-            System.out.println("7. Cek Inventori");
-            System.out.println("8. Toko");
+            System.out.println("3. Memberi Pupuk");
+            System.out.println("4. Panen Tanaman");
+            System.out.println("5. Cek Status Tanaman");
+            System.out.println("6. Update Hari");
+            System.out.println("7. Cek kondisi Cuaca");
+            System.out.println("8. Cek Inventori");
+            System.out.println("9. Toko");
             System.out.println("0. Keluar");
             System.out.print("Pilih Menu: ");
             int pilih = sc.nextInt();
@@ -62,21 +63,28 @@ public class MainUTS {
                     System.out.println("╚════════════════════════════════╝");
                     lahan.siramTanaman();
                     break;
+
                 case 3:
+                    System.out.println("╔════════════════════════════════╗");
+                    System.out.println("║         Memberi Pupuk          ║");
+                    System.out.println("╚════════════════════════════════╝");
+                    lahan.beriPupuk(pemain);
+                    break;
+                case 4:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║          Panen Tanaman         ║");
                     System.out.println("╚════════════════════════════════╝");
                     lahan.panenTanaman(pemain);
                     break;
 
-                case 4:
+                case 5:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║        Cek Status Tanaman      ║");
                     System.out.println("╚════════════════════════════════╝");
                     lahan.cekStatusTanaman();
                     break;
 
-                case 5:
+                case 6:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║           Update Hari          ║");
                     System.out.println("╚════════════════════════════════╝");
@@ -98,7 +106,7 @@ public class MainUTS {
                     }
                     break;
 
-                case 6:
+                case 7:
                     System.out.println("╔══════════════════════════════════════╗");
                     System.out.println("║          Cek Kondisi Cuaca           ║");
                     System.out.println("╚══════════════════════════════════════╝");
@@ -121,19 +129,20 @@ public class MainUTS {
                     }
                     break;
 
-                case 7:
+                case 8:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║           Cek Inventori        ║");
                     System.out.println("╚════════════════════════════════╝");
                     pemain.tampilkanInventori();
                     break;
 
-                case 8:
+                case 9:
                     System.out.println("╔═════════════════════════╗");
                     System.out.println("║           Toko          ║");
                     System.out.println("╚═════════════════════════╝");
                     System.out.println("1. Membeli Bibit Tanaman");
-                    System.out.println("2. Menjual Hasil Panen");
+                    System.out.println("2. Membeli Pupuk Tanaman");
+                    System.out.println("3. Menjual Hasil Panen");
                     System.out.print("Pilih Menu: ");
                     int pilihanToko = sc.nextInt();
                     switch (pilihanToko) {
@@ -161,7 +170,13 @@ public class MainUTS {
                                     break;
                             }
                             break;
+
                         case 2:
+                            System.out.print("Masukkan jumlah pupuk yang ingin dibeli (1 = 10000): ");
+                            int jumlahPupuk = sc.nextInt();
+                            toko.beliPupuk(pemain, jumlahPupuk);
+                            break;
+                        case 3:
                             pemain.tampilkanInventori();
                             System.out.print("Masukkan jumlah hasil panen yang ingin dijual: ");
                             int jumlahPanen = sc.nextInt();

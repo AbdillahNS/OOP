@@ -8,6 +8,7 @@ public class Pemain {
     private int jumlahBibitPadi;
     private int jumlahBibitJagung;
     private int jumlahBibitSawi;
+    private int jumlahPupuk;
 
     public Pemain(int uang) {
         this.uang = uang;
@@ -17,11 +18,13 @@ public class Pemain {
         this.jumlahBibitPadi = 1;
         this.jumlahBibitJagung = 1;
         this.jumlahBibitSawi = 1;
+        this.jumlahPupuk = 1;
     }
 
     public int getUang() {
         return uang;
     }
+
 
     public void kurangiUang(int jumlah) {
         uang -= jumlah;
@@ -61,18 +64,6 @@ public class Pemain {
         } else {
             System.out.println("Tidak ada cukup hasil panen untuk dijual.");
         }
-    }
-
-    public void tampilkanInventori() {
-        System.out.println("Inventori Hasil Panen:");
-        for (int i = 0; i < jumlahHasilPanen; i++) {
-            System.out.println("- " + inventoriTanaman[i]);
-        }
-        System.out.println("\nInventori Bibit:");
-        System.out.println("Bibit Padi: " + jumlahBibitPadi);
-        System.out.println("Bibit Jagung: " + jumlahBibitJagung);
-        System.out.println("Bibit Sawi: " + jumlahBibitSawi);
-        System.out.println("Uang saat ini: " + uang);
     }
 
     public void tambahBibit(String jenisBibit, int jumlah) {
@@ -125,5 +116,34 @@ public class Pemain {
                 return jumlahBibitSawi > 0;
         }
         return false;
+    }
+
+    public int getJumlahPupuk() {
+        return jumlahPupuk;
+    }
+
+    public void tambahPupuk(int jumlah) {
+        jumlahPupuk += jumlah;
+    }
+
+    public void kurangiPupuk(int jumlah) {
+        if (jumlahPupuk >= jumlah) {
+            jumlahPupuk -= jumlah;
+        } else {
+            System.out.println("Tidak cukup pupuk.");
+        }
+    }
+
+    public void tampilkanInventori() {
+        System.out.println("Inventori Hasil Panen:");
+        for (int i = 0; i < jumlahHasilPanen; i++) {
+            System.out.println("- " + inventoriTanaman[i]);
+        }
+        System.out.println("\nInventori Tanaman:");
+        System.out.println("Bibit Padi: " + jumlahBibitPadi);
+        System.out.println("Bibit Jagung: " + jumlahBibitJagung);
+        System.out.println("Bibit Sawi: " + jumlahBibitSawi);
+        System.out.println("Pupuk: " + jumlahPupuk);
+        System.out.println("Uang saat ini: " + uang);
     }
 }
