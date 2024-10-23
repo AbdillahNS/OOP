@@ -13,7 +13,7 @@ public class Pemain {
     public Pemain(int uang) {
         this.uang = uang;
         this.jumlahHasilPanen = 0;
-        this.kapasitasInventori = 100;
+        this.kapasitasInventori = 30;
         this.inventoriTanaman = new String[kapasitasInventori];
         this.jumlahBibitPadi = 1;
         this.jumlahBibitJagung = 1;
