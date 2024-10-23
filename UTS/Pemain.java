@@ -25,7 +25,6 @@ public class Pemain {
         return uang;
     }
 
-
     public void kurangiUang(int jumlah) {
         uang -= jumlah;
     }
