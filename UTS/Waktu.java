@@ -23,11 +23,11 @@ public class Waktu {
     }
 
     private void periksaMusim() {
-        if (hari >= 1 && hari <= 90) {
+        if (hari >= 1 && hari <= 60) {
             musim = "Musim Semi";
-        } else if (hari >= 91 && hari <= 180) {
+        } else if (hari >= 61 && hari <= 90) {
             musim = "Musim Panas";
-        } else if (hari >= 181 && hari <= 270) {
+        } else if (hari >= 91 && hari <= 210) {
             musim = "Musim Gugur";
         } else {
             musim = "Musim Dingin";
