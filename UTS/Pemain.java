@@ -68,7 +68,7 @@ public class Pemain {
         for (int i = 0; i < jumlahHasilPanen; i++) {
             System.out.println("- " + inventoriTanaman[i]);
         }
-        System.out.println("Inventori Bibit:");
+        System.out.println("\nInventori Bibit:");
         System.out.println("Bibit Padi: " + jumlahBibitPadi);
         System.out.println("Bibit Jagung: " + jumlahBibitJagung);
         System.out.println("Bibit Sawi: " + jumlahBibitSawi);

@@ -87,14 +87,35 @@ public class Lahan {
         if (padi != null && padi.bisaDipanen()) {
             padi.panen();
             pemain.tambahHasilPanen("Padi");
+        } else {
+            System.out.println("Padi belum bisa dipanen.");
         }
         if (jagung != null && jagung.bisaDipanen()) {
             jagung.panen();
             pemain.tambahHasilPanen("Jagung");
+        } else {
+            System.out.println("Jagung belum bisa dipanen.");
         }
         if (sawi != null && sawi.bisaDipanen()) {
             sawi.panen();
             pemain.tambahHasilPanen("sawi");
+        } else {
+            System.out.println("Sawi belum bisa dipanen.");
         }
     }
+
+    public void siramTanaman() {
+        if (padi != null) {
+            padi.setMenyiram(true);
+            System.out.println("Padi telah disiram.");
+        }
+        if (jagung != null) {
+            jagung.setMenyiram(true);
+            System.out.println("Jagung telah disiram.");
+        }
+        if (sawi != null) {
+            sawi.setMenyiram(true);
+            System.out.println("Sawi telah disiram.");
+        }
+    }   
 }

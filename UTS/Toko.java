@@ -32,6 +32,6 @@ public class Toko {
 
         pemain.kurangiHasilPanen(jumlah);
         pemain.tambahUang(totalPenjualan);
-        System.out.println("Anda telah menjual " + jumlah + " hasil panen dengan harga total " + totalPenjualan);
+        System.out.println("Berhasil menjual " + jumlah + " hasil panen dengan harga total " + totalPenjualan);
     }
 }

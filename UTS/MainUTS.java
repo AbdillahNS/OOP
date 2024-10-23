@@ -18,13 +18,14 @@ public class MainUTS {
             System.out.println("║            Simulasi Pertanian         ║");
             System.out.println("╚═══════════════════════════════════════╝");
             System.out.println("1. Menanam Tanaman");
-            System.out.println("2. Cek Status Tanaman");
-            System.out.println("3. Update Hari");
-            System.out.println("4. Panen Tanaman");
-            System.out.println("5. Cek kondisi Cuaca");
-            System.out.println("6. Cek Inventori");
-            System.out.println("7. Toko");
-            System.out.println("8. Keluar");
+            System.out.println("2. Menyiram Tanaman");
+            System.out.println("3. Panen Tanaman");
+            System.out.println("4. Cek Status Tanaman");
+            System.out.println("5. Update Hari");
+            System.out.println("6. Cek kondisi Cuaca");
+            System.out.println("7. Cek Inventori");
+            System.out.println("8. Toko");
+            System.out.println("0. Keluar");
             System.out.print("Pilih Menu: ");
             int pilih = sc.nextInt();
             switch (pilih) {
@@ -57,12 +58,25 @@ public class MainUTS {
 
                 case 2:
                     System.out.println("╔════════════════════════════════╗");
+                    System.out.println("║         Menyiram Tanaman       ║");
+                    System.out.println("╚════════════════════════════════╝");
+                    lahan.siramTanaman();
+                    break;
+                case 3:
+                    System.out.println("╔════════════════════════════════╗");
+                    System.out.println("║          Panen Tanaman         ║");
+                    System.out.println("╚════════════════════════════════╝");
+                    lahan.panenTanaman(pemain);
+                    break;
+
+                case 4:
+                    System.out.println("╔════════════════════════════════╗");
                     System.out.println("║        Cek Status Tanaman      ║");
                     System.out.println("╚════════════════════════════════╝");
                     lahan.cekStatusTanaman();
                     break;
 
-                case 3:
+                case 5:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║           Update Hari          ║");
                     System.out.println("╚════════════════════════════════╝");
@@ -72,23 +86,19 @@ public class MainUTS {
 
                     if (lahan.getPadi() != null) {
                         lahan.getPadi().setHariTumbuh(tambahanHari);
+                        lahan.getPadi().setMenyiram(false);
                     }
                     if (lahan.getJagung() != null) {
                         lahan.getJagung().setHariTumbuh(tambahanHari);
+                        lahan.getJagung().setMenyiram(false);
                     }
                     if (lahan.getSawi() != null) {
                         lahan.getSawi().setHariTumbuh(tambahanHari);
+                        lahan.getSawi().setMenyiram(false);
                     }
                     break;
 
-                case 4:
-                    System.out.println("╔════════════════════════════════╗");
-                    System.out.println("║          Panen Tanaman         ║");
-                    System.out.println("╚════════════════════════════════╝");
-                    lahan.panenTanaman(pemain);
-                    break;
-
-                case 5:
+                case 6:
                     System.out.println("╔══════════════════════════════════════╗");
                     System.out.println("║          Cek Kondisi Cuaca           ║");
                     System.out.println("╚══════════════════════════════════════╝");
@@ -111,14 +121,14 @@ public class MainUTS {
                     }
                     break;
 
-                case 6:
+                case 7:
                     System.out.println("╔════════════════════════════════╗");
                     System.out.println("║           Cek Inventori        ║");
                     System.out.println("╚════════════════════════════════╝");
                     pemain.tampilkanInventori();
                     break;
 
-                case 7:
+                case 8:
                     System.out.println("╔═════════════════════════╗");
                     System.out.println("║           Toko          ║");
                     System.out.println("╚═════════════════════════╝");
@@ -163,7 +173,7 @@ public class MainUTS {
                     }
                     break;
 
-                case 8:
+                case 9:
                     System.out.println("Berhasil Keluar Program.");
                     menu = false;
                     break;
