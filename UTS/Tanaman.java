@@ -58,5 +58,4 @@ public class Tanaman {
     public String getJenisTanaman() {
         return "Tanaman";
     }
-
 }
