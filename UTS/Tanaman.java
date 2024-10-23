@@ -1,6 +1,6 @@
 package UTS;
 
-public abstract class Tanaman {
+public class Tanaman {
     private String nama;
     private int waktuPanen;
     private int hariTumbuh;
@@ -55,5 +55,8 @@ public abstract class Tanaman {
         }
     }
 
-    public abstract String getJenisTanaman();
+    public String getJenisTanaman() {
+        return "Tanaman";
+    }
+
 }

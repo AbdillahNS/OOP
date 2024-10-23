@@ -173,7 +173,7 @@ public class MainUTS {
                     }
                     break;
 
-                case 9:
+                case 0:
                     System.out.println("Berhasil Keluar Program.");
                     menu = false;
                     break;
