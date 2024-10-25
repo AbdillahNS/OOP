@@ -51,6 +51,10 @@ public class Tanaman {
         return hariTumbuh >= waktuPanen;
     }
 
+    public String getJenisTanaman() {
+        return "Tanaman";
+    }
+
     public void statusTanaman() {
         System.out.println(getNama() + " - Hari ke - " + getHariTumbuh() + 
                            " || Status panen: " + (bisaDipanen() ? "Siap Dipanen" : "Belum siap dipanen") +  
@@ -64,9 +68,5 @@ public class Tanaman {
         } else {
             System.out.println(getNama() + " belum bisa dipanen.");
         }
-    }
-
-    public String getJenisTanaman() {
-        return "Tanaman";
     }
 }

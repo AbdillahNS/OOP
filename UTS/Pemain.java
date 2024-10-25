@@ -42,15 +42,27 @@ public class Pemain {
         }
     }
 
-    public int getHasilPanen() {
-        return jumlahHasilPanen;
-    }
-
     public String getSemuaHasilPanen(int index) {
         if (index >= 0 && index < jumlahHasilPanen) {
             return inventoriTanaman[index];
         }
         return null;
+    }
+
+    public int getJumlahPupuk() {
+        return jumlahPupuk;
+    }
+
+    public void tambahPupuk(int jumlah) {
+        jumlahPupuk += jumlah;
+    }
+
+    public void kurangiPupuk(int jumlah) {
+        if (jumlahPupuk >= jumlah) {
+            jumlahPupuk -= jumlah;
+        } else {
+            System.out.println("Tidak cukup pupuk.");
+        }
     }
 
     public void kurangiHasilPanen(int jumlah) {
@@ -115,22 +127,6 @@ public class Pemain {
                 return jumlahBibitSawi > 0;
         }
         return false;
-    }
-
-    public int getJumlahPupuk() {
-        return jumlahPupuk;
-    }
-
-    public void tambahPupuk(int jumlah) {
-        jumlahPupuk += jumlah;
-    }
-
-    public void kurangiPupuk(int jumlah) {
-        if (jumlahPupuk >= jumlah) {
-            jumlahPupuk -= jumlah;
-        } else {
-            System.out.println("Tidak cukup pupuk.");
-        }
     }
 
     public void tampilkanInventori() {

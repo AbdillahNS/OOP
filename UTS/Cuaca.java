@@ -7,6 +7,7 @@ public class Cuaca {
     public Cuaca() {
         
     }
+    
     public Cuaca(int suhu, int kelembaban) {
         this.suhu = suhu;
         this.kelembaban = kelembaban;

@@ -12,10 +12,6 @@ public class Lahan {
         this.pemain = pemain;
     }
 
-    public void infoLahan() {
-        System.out.println("Tanaman ditanam di lahan, dengan Ukuran lahan " + ukuran + " hektar\n");
-    }
-
     public Padi getPadi() {
         return padi;
     }
@@ -28,6 +24,10 @@ public class Lahan {
         return sawi;
     }
 
+    public void infoLahan() {
+        System.out.println("Tanaman ditanam di lahan, dengan Ukuran lahan " + ukuran + " hektar\n");
+    }
+    
     public void menanam(Tanaman tanaman) {
         String jenis = tanaman.getJenisTanaman();
         switch (jenis) {
